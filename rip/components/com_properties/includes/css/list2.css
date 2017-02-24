@@ -1,0 +1,113 @@
+div.module_gris0 {
+	margin-top: 20px;
+	/*float: left;*/
+	/*clear: both;*/
+	width: 100%;
+}
+
+
+
+div.module_gris0 h2 {
+	font-size: 100%;
+	color:#000000;
+	line-height:4px;
+}
+div.module_gris0 h2 a{
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 100%;
+	color:#000000;	
+}
+div.module_gris0 .h2 {
+	font-size: 100%;
+}
+
+div.module_gris0 {
+	background: url(../img/list2/module_grey_br.png) no-repeat bottom right;
+
+}
+div.module_gris0 div.module_gris_2 {
+background: url(../img/list2/module_grey_bl.png) no-repeat bottom left;
+}
+
+div.module_gris0 div div.module_gris_3 {
+background: url(../img/list2/module_grey_tr.png) no-repeat top right;
+}
+
+div.module_gris0 div div div.module_gris_4 {
+	padding: 0 10px 10px;
+background: url(../img/list2/module_grey_tl.png) no-repeat top left;
+}
+
+.producto {
+margin:0px 0px 0px 0px;
+border: none;
+clear:both;
+}
+
+.top_title {
+margin:5px 0px 0px 0px;
+
+width:100%;
+float:left;
+height:30px;
+text-align:left;
+	padding: 0;
+}
+ .title_vote{
+width:60%;
+float:left;
+padding: 5px 0px 0px 0px ;
+
+}
+ .title_vote h1.h_title{
+line-height:20px;
+font-size:14px;
+padding:0;
+margin:0;
+}
+ .title_vote a{
+ 	padding-left:15px;
+	text-decoration:none;
+	font-weight:bold !important;		
+}
+
+ .div_vote {
+width:39%;
+float:right;
+padding: 0px 0px 0px 0px ;
+}
+
+ .div_rating {
+float:right;
+width:100%;
+padding:2px 2px 0px 2px;
+background:none;
+}
+
+ .ajaxvote-box {
+float:right;
+width:50px !important;	
+
+}
+ .ajaxvote-inline-rating {
+
+}
+
+
+.div_pics {
+width:30%;
+float:right;
+text-align:right;
+padding-top: 5px;
+}
+
+.div_pics img{
+padding-left: 5px;
+
+}
+
+.div_pics span{
+padding-left: 5px;
+
+}

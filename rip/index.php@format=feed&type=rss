@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Home</title>
+		<description>A INVESTIM é uma empresa que se dedica às fusões e aquisições, aconselhando organizações e empresários na avaliação, aquisição e/ou venda de empresas.</description>
+		<link>index.php?option=com_content&amp;view=frontpage</link>
+		<lastBuildDate>Thu, 23 Feb 2017 23:54:18 +0000</lastBuildDate>
+		<generator>Joomla! 1.5 - Open Source Content Management</generator>
+		<language>pt-br</language>
+		<item>
+			<title>Bem Vindo</title>
+			<link>index.php?option=com_content&amp;view=article&amp;id=2:bem-vindo</link>
+			<guid>index.php?option=com_content&amp;view=article&amp;id=2:bem-vindo</guid>
+			<description><![CDATA[<h1><span style="font-size: 18pt;">Bem Vindo ao Site da Investim</span></h1>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><span style="font-family: arial,helvetica,sans-serif;"><span style="color: #888888;">Com&nbsp;7 anos de experiência voltada exclusivamente à compra e venda empresas, através de um trabalho dedicado e confidencial, temos a certeza de estarmos preparado e intermediar negócios de pequeno médio e grande porte atendendo empresas e investidores nacionais internacionais.</span></span></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><span style="font-family: arial,helvetica,sans-serif;"><span style="color: #888888;">A&nbsp;INVESTIM é uma empresa que se dedica às fusões e aquisições, aconselhando organizações e empresários na avaliação, aquisição e/ou venda de empresas.&nbsp;</span></span></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><span style="font-family: arial,helvetica,sans-serif;"><span style="color: #888888;">Nosso site foi criado com intuito de concentrar oportunidade na compra e venda de empresas em território nacional e internacional.</span></span></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><span style="font-family: arial,helvetica,sans-serif;"><span style="color: #888888;">Faça seu Login e navegue neste novo&nbsp;portal de Negócios.</span></span></span></p>]]></description>
+			<author>investim@investim.com.br (Administrator)</author>
+			<category>frontpage</category>
+			<pubDate>Sat, 03 Apr 2010 22:14:17 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

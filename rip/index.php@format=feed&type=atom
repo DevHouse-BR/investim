@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="pt-br">
+	<title type="text">Home</title>
+	<subtitle type="text">A INVESTIM é uma empresa que se dedica às fusões e aquisições, aconselhando organizações e empresários na avaliação, aquisição e/ou venda de empresas.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.investim.com.br"/>
+	<id>index.php</id>
+	<updated>2017-02-23T23:54:18Z</updated>
+	<generator uri="http://joomla.org" version="1.5">Joomla! 1.5 - Open Source Content Management</generator>
+<link rel="self" type="application/atom+xml" href="index.php?format=feed&amp;type=atom" />
+	<entry>
+		<title>Bem Vindo</title>
+		<link rel="alternate" type="text/html" href="index.php?option=com_content&amp;view=article&amp;id=2:bem-vindo"/>
+		<published>2010-04-03T22:14:17Z</published>
+		<updated>2010-04-03T22:14:17Z</updated>
+		<id>index.php?option=com_content&amp;view=article&amp;id=2:bem-vindo</id>
+		<author>
+			<name>Administrator</name>
+		<email>investim@investim.com.br</email>
+		</author>
+		<summary type="html">&lt;h1&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;Bem Vindo ao Site da Investim&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;Com&amp;nbsp;7 anos de experiência voltada exclusivamente à compra e venda empresas, através de um trabalho dedicado e confidencial, temos a certeza de estarmos preparado e intermediar negócios de pequeno médio e grande porte atendendo empresas e investidores nacionais internacionais.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;A&amp;nbsp;INVESTIM é uma empresa que se dedica às fusões e aquisições, aconselhando organizações e empresários na avaliação, aquisição e/ou venda de empresas.&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;Nosso site foi criado com intuito de concentrar oportunidade na compra e venda de empresas em território nacional e internacional.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;Faça seu Login e navegue neste novo&amp;nbsp;portal de Negócios.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</summary>
+		<content type="html">&lt;h1&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;Bem Vindo ao Site da Investim&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;Com&amp;nbsp;7 anos de experiência voltada exclusivamente à compra e venda empresas, através de um trabalho dedicado e confidencial, temos a certeza de estarmos preparado e intermediar negócios de pequeno médio e grande porte atendendo empresas e investidores nacionais internacionais.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;A&amp;nbsp;INVESTIM é uma empresa que se dedica às fusões e aquisições, aconselhando organizações e empresários na avaliação, aquisição e/ou venda de empresas.&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;Nosso site foi criado com intuito de concentrar oportunidade na compra e venda de empresas em território nacional e internacional.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span style=&quot;font-family: arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;Faça seu Login e navegue neste novo&amp;nbsp;portal de Negócios.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</content>
+	</entry>
+</feed>

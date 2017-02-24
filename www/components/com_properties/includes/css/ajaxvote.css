@@ -1,0 +1,32 @@
+.div_rating {
+float:right;
+width:100%;
+padding:2px 2px 0px 2px;
+background:none;
+}
+.ajaxvote-inline-rating {display:block;vertical-align:middle;line-height:15px;}
+.ajaxvote-star-rating {width:175px;float:right;}
+
+.ajaxvote-star-rating,
+.ajaxvote-star-rating a:hover,
+.ajaxvote-star-rating .current-rating {background:url(../img/star.png) left -1000px repeat-x;}
+.ajaxvote-star-rating {position:relative;width:100px;height:16px;overflow:hidden;list-style:none;margin:0;padding:0;background-position:left top;}
+.ajaxvote-star-rating li {display:inline;background-image:none;padding:0;}
+.ajaxvote-star-rating a,
+.ajaxvote-star-rating .current-rating {position:absolute;top:0;left:0;text-indent:-1000px;height:20px;line-height:20px;outline:none;overflow:hidden;border:none;}
+.ajaxvote-star-rating a{cursor:pointer;}
+.ajaxvote-star-rating a:hover {background-position:left bottom;}
+.ajaxvote-star-rating a.one-star {width:20%;z-index:6;}
+.ajaxvote-star-rating a.two-stars {width:40%;z-index:5;}
+.ajaxvote-star-rating a.three-stars {width:60%;z-index:4;}
+.ajaxvote-star-rating a.four-stars {width:80%;z-index:3;}
+.ajaxvote-star-rating a.five-stars {width:100%;z-index:2;}
+.ajaxvote-star-rating .current-rating {z-index:1;background-position:0 center;margin:0;padding:0;}
+
+.ajaxvote-box {margin:0 0 0 5px;padding:0;float:right;}
+.ajaxvote-clr {clear:both;}
+.ajaxvote-msg {margin:0 5px 0 5px;padding:0;float:right;}
+
+.ajaxvote-star-rating .current-rating-comment {background:url(../img/star.png) left -1000px repeat-x;}
+.ajaxvote-star-rating .current-rating-comment {position:absolute;top:0;left:0;text-indent:-1000px;height:20px;line-height:20px;outline:none;overflow:hidden;border:none;}
+.ajaxvote-star-rating .current-rating-comment {z-index:1;background-position: 0 -40px;margin:0;padding:0;}

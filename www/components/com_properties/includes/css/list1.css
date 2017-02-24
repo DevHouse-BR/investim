@@ -1,0 +1,125 @@
+#property_mainbody {
+margin:2px 0px 4px 0px;
+float:left;
+width:100%;
+}
+
+/* Main-Div-Left Style */
+
+#property_mainbody_left {
+float:left;
+width:120px;
+}
+
+/* Main-Div-Right Style */
+
+#property_mainbody_right {
+float:left;
+width:75%;
+
+}
+
+/* Product Image Style */
+
+#property_product_image {
+width:100px;
+}
+
+#property_product_image img {
+width:100px;
+height:auto;
+padding:2px;
+border: 1px solid #CCCCCC;
+}
+
+/* Product Title Style */
+#product_title_align {
+padding-right:5px;
+}
+
+#property_product_title {
+border-bottom-color:#207ce5;
+border-bottom-width:1px;
+border-bottom-style:solid;
+padding:5px 5px 0px 0px;
+float:left;
+text-align:left;
+width:100%;
+}
+
+#property_product_title a, #property_product_title a:active, #property_product_title a:focus {
+text-decoration:none;
+color:#207ce5;
+font-weight:bold;
+font-size:12px;
+}
+
+#property_product_title a:hover {
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+	font-size:12px;
+}
+
+
+/* Product Price Style */
+
+.property_product_price {
+color:#009900;
+font-size:11px;
+padding-top:3px;
+
+}
+
+/* Product Description Style */
+#property_product_description_left {
+float: left;
+width: 48%;
+font-size:12px;
+text-align:left;
+/*border: 1px solid red;*/
+}
+/* Product Description Style */
+#property_product_description_right {
+float: right;
+width: 48%;
+font-size:12px;
+/*border: 1px solid red;*/
+text-align:left;
+}
+/* Product Details Link Style */
+
+#property_product_details_align {
+float:right;
+margin-top:10px;
+padding:0px 5px 5px 0px;
+}
+
+#property_product_details {
+text-align:right;
+border-color:#207ce5;
+border-width:1px;
+border-style:solid;
+background-image:url(images/property_product_details.png);
+background-position:bottom;
+background-repeat:repeat-x;
+background-color:#207ce5;
+padding: 0px 4px 0px 4px;
+line-height:18px;
+}
+
+#property_product_details a, #property_product_details a:active, #property_product_details a:focus {
+text-decoration:none;
+color:#FFFFFF;
+font-weight:bold;
+font-size:10px;
+}
+
+#property_product_details a:hover {
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+	font-size:10px;
+}
+
+/* CSS End */

@@ -1,0 +1,79 @@
+
+#NewsTicker{
+	border:solid 1px #cccccc;
+	width:500px;
+	height:100px;
+	margin:0 auto;
+	/*float: left;*/
+}
+	#NewsTicker h1{
+	padding:4px;
+	margin:0;
+	border:0;
+	background:#dfe7ed;
+	color:#000000;
+	font-size:11px;
+	font-weight:bold;
+	}
+	#NewsVertical {
+	width: 500px;
+	height: 100px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	}
+
+	#TickerVertical {
+	width: 500px;
+	height: 100px;
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	}
+	#TickerVertical li {
+	width: 250px;
+	color: #444444;
+	text-align: left;
+	font-size: 11px;
+	margin: 0;
+	padding: 4px 0px 0px 4px;
+	float: left;
+	height: 110px;
+	display: inline;
+	
+	}
+		#TickerVertical li .NewsTitle{
+			display: block;
+			color: #000000;
+			font-size: 11px;
+			margin-bottom:2px;
+			font-family:Georgia, "Times New Roman", Times, serif;
+		}
+		#TickerVertical li .NewsTitle a:link,
+		#TickerVertical li .NewsTitle a:Visited {
+			display: block;
+			color: #000000;
+			margin-bottom:2px;
+			text-decoration:none;
+			font-weight: bold;
+			color: #7F95B1;
+			
+		}
+		#TickerVertical li .NewsTitle a:hover {
+			text-decoration:underline;
+		}
+		
+		#TickerVertical li .NewsImg{
+			float:left;
+			margin-right:5px;
+			border:solid 1px #DEDEDE;
+			padding: 3px;
+		}
+		#TickerVertical li .NewsFooter{
+			display: block;
+			font-size: 10px;
+			margin:6px 0 14px 0;
+			color:#000000
+		}

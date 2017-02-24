@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.0.0">
+	<name>Busca Empresas Investim</name>
+	<author>Leonardo - DevHouse</author>
+	<creationDate>13 de abril de 2010</creationDate>
+	<copyright>Copyright (C) 2010 DevHouse</copyright>
+	<license></license>
+	<authorEmail>leonardo@devhouse.com.br</authorEmail>
+	<authorUrl>www.devhouse.com.br</authorUrl>
+	<version>1.0.0</version>
+	<description>Busca as empresas cadastradas.</description>
+	<files>
+		<filename module="mod_search">mod_search_investim.php</filename>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>

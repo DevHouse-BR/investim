@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="List Properties Layout">
+		<message>
+			<![CDATA[List Properties Layout]]>
+		</message>
+	</layout>
+	<state>
+		<name>List Properties Layout</name>
+		<description>List Properties Layout</description>
+		<url addpath="/administrator/components/com_properties/elements">
+			<param name="cid" type="category" default="" label="Select category" description="An category" />
+			<param name="tid" type="type" default="" label="Select type" description="An type" />
+		</url>
+		
+		<params addpath="/administrator/components/com_properties/elements">
+			
+		
+		<param name="DetailsMarket" type="list" default="" label="Details Market" description="Details Market Properties List">
+			<option value="">Details Market</option>
+			<option value="0">DETAILS_MARKET0</option>
+			<option value="1">DETAILS_MARKET1</option>
+			<option value="2">DETAILS_MARKET2</option>
+			<option value="3">DETAILS_MARKET3</option>
+			<option value="4">DETAILS_MARKET4</option>
+			<option value="5">DETAILS_MARKET5</option>
+			<option value="6">DETAILS_MARKET6</option>
+		</param>
+		<param name="OnlyFeatured" type="list" default="0" label="Only Featured" description="Only Featured Properties List">
+			<option value="">All Properties</option>			
+			<option value="1">Only Featured</option>			
+		</param>
+		</params>
+	</state>
+</metadata>

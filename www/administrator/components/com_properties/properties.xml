@@ -1,0 +1,1033 @@
+<install type="component" version="1.5.0">
+	<name>Properties</name>	
+	<creationDate>2009-11-05</creationDate>
+	<author>este8an</author>
+	<authorEmail>fabiouz@gmail.com</authorEmail>
+	<authorUrl>http://www.yexey.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>	
+	<version>3.1105</version>
+	<description>Component for Real Estate</description>
+	<installfile>install.properties.php</installfile>
+  	<uninstallfile>uninstall.properties.php</uninstallfile>
+	<install>
+		<queries>
+		<query>
+			DROP TABLE IF EXISTS `#__properties_category`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_category` (
+  `id` int(2) NOT NULL auto_increment,
+  `name` varchar(100) default NULL,
+  `alias` varchar(100) default NULL,
+  `parent` int(2) default NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(1) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_country`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_country` (
+  `id` int(3) NOT NULL auto_increment,
+  `name` varchar(100) NOT NULL,
+  `alias` varchar(100) NOT NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(11) NOT NULL default '0',
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_lightbox`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_lightbox` (
+  `id` int(11) NOT NULL auto_increment,
+  `uid` int(11) NOT NULL default '0',
+  `propid` int(11) NOT NULL default '0',
+  `date` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_locality`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_locality` (
+  `id` int(6) NOT NULL auto_increment,
+  `parent` int(3) NOT NULL,
+  `mid` int(6) NOT NULL,
+  `zipcode` int(6) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `alias` varchar(100) NOT NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(11) NOT NULL default '0',
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_products`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_products` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
+  `parent` int(6) NOT NULL,
+  `agent_id` int(6) NOT NULL,
+  `agent` varchar(255) NOT NULL,
+  `ref` varchar(50) NOT NULL,
+  `type` int(6) NOT NULL,
+  `cid` int(6) NOT NULL,
+  `lid` int(6) NOT NULL,
+  `sid` int(6) NOT NULL,
+  `cyid` int(6) NOT NULL,
+  `postcode` varchar(255) default NULL,
+  `address` varchar(255) default NULL,
+  `description` text NOT NULL,
+  `text` text NOT NULL,
+  `price` decimal(15,2) default NULL,
+  `published` tinyint(1) NOT NULL,
+  `use_booking` tinyint(1) NOT NULL,
+  `ordering` int(11) NOT NULL default '0',
+  `panoramic` varchar(255) default NULL,
+  `video` text NOT NULL,
+  `lat` float(10,6) NOT NULL,
+  `lng` float(10,6) NOT NULL,
+  `available` tinyint(1) NOT NULL,
+  `featured` tinyint(4) NOT NULL,
+  `years` int(4) NOT NULL,
+  `bedrooms` tinyint(1) NOT NULL,
+  `bathrooms` tinyint(1) NOT NULL,
+  `garage` tinyint(1) NOT NULL,
+  `area` int(5) NOT NULL,
+  `covered_area` int(5) NOT NULL,
+  `hits` int(6) NOT NULL,
+  `listdate` date NOT NULL default '0000-00-00',
+  `refresh_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `extra1` tinyint(1) NOT NULL default '0',
+  `extra2` tinyint(1) NOT NULL default '0',
+  `extra3` tinyint(1) NOT NULL default '0',
+  `extra4` tinyint(1) NOT NULL default '0',
+  `extra5` tinyint(1) NOT NULL default '0',
+  `extra6` tinyint(1) NOT NULL default '0',
+  `extra7` tinyint(1) NOT NULL default '0',
+  `extra8` tinyint(1) NOT NULL default '0',
+  `extra9` tinyint(1) NOT NULL default '0',
+  `extra10` tinyint(1) NOT NULL default '0',
+  `extra11` tinyint(1) NOT NULL default '0',
+  `extra12` tinyint(1) NOT NULL default '0',
+  `extra13` tinyint(1) NOT NULL default '0',
+  `extra14` tinyint(1) NOT NULL default '0',
+  `extra15` tinyint(1) NOT NULL default '0',
+  `extra16` tinyint(1) NOT NULL default '0',
+  `extra17` tinyint(1) NOT NULL default '0',
+  `extra18` tinyint(1) NOT NULL default '0',
+  `extra19` tinyint(1) NOT NULL default '0',
+  `extra20` tinyint(1) NOT NULL default '0',
+  `extra21` tinyint(1) NOT NULL default '0',
+  `extra22` tinyint(1) NOT NULL default '0',
+  `extra23` tinyint(1) NOT NULL default '0',
+  `extra24` tinyint(1) NOT NULL default '0',
+  `extra25` tinyint(1) NOT NULL default '0',
+  `extra26` tinyint(1) NOT NULL default '0',
+  `extra27` tinyint(1) NOT NULL default '0',
+  `extra28` tinyint(1) NOT NULL default '0',
+  `extra29` tinyint(1) NOT NULL default '0',
+  `extra30` tinyint(1) NOT NULL default '0',
+  `extra31` tinyint(1) NOT NULL default '0',
+  `extra32` tinyint(1) NOT NULL default '0',
+  `extra33` tinyint(1) NOT NULL default '0',
+  `extra34` tinyint(1) NOT NULL default '0',
+  `extra35` tinyint(1) NOT NULL default '0',
+  `extra36` tinyint(1) NOT NULL default '0',
+  `extra37` tinyint(1) NOT NULL default '0',
+  `extra38` tinyint(1) NOT NULL default '0',
+  `extra39` tinyint(1) NOT NULL default '0',
+  `extra40` tinyint(1) NOT NULL default '0',
+  `extra41` varchar(255) NOT NULL,
+  `extra42` varchar(255) NOT NULL,
+  `extra43` varchar(255) NOT NULL,
+  `extra44` varchar(255) NOT NULL,
+  `extra45` varchar(255) NOT NULL,
+  `extra46` varchar(255) NOT NULL,
+  `extra47` varchar(255) NOT NULL,
+  `extra48` varchar(255) NOT NULL,
+  `extra49` varchar(255) NOT NULL,
+  `extra50` varchar(255) NOT NULL,
+  `extra51` varchar(255) NOT NULL,
+  `extra52` varchar(255) NOT NULL,
+  `extra53` varchar(255) NOT NULL,
+  `extra54` varchar(255) NOT NULL,
+  `extra55` varchar(255) NOT NULL,
+  `extra56` varchar(255) NOT NULL,
+  `extra57` varchar(255) NOT NULL,
+  `extra58` varchar(255) NOT NULL,
+  `extra59` varchar(255) NOT NULL,
+  `extra60` varchar(255) NOT NULL,
+  `extra61` varchar(255) NOT NULL,
+  `extra62` varchar(255) NOT NULL,
+  `extra63` varchar(255) NOT NULL,
+  `extra64` varchar(255) NOT NULL,
+  `extra65` varchar(255) NOT NULL,
+  `extra66` varchar(255) NOT NULL,
+  `extra67` varchar(255) NOT NULL,
+  `extra68` varchar(255) NOT NULL,
+  `extra69` varchar(255) NOT NULL,
+  `extra70` varchar(255) NOT NULL,
+  `extra71` varchar(255) NOT NULL,
+  `extra72` varchar(255) NOT NULL,
+  `extra73` varchar(255) NOT NULL,
+  `extra74` varchar(255) NOT NULL,
+  `extra75` varchar(255) NOT NULL,
+  `extra76` varchar(255) NOT NULL,
+  `extra77` varchar(255) NOT NULL,
+  `extra78` varchar(255) NOT NULL,
+  `extra79` varchar(255) NOT NULL,
+  `extra80` varchar(255) NOT NULL,
+  `extra81` text NOT NULL,
+  `extra82` text NOT NULL,
+  `extra83` text NOT NULL,
+  `extra84` text NOT NULL,
+  `extra85` text NOT NULL,
+  `extra86` text NOT NULL,
+  `extra87` text NOT NULL,
+  `extra88` text NOT NULL,
+  `extra89` text NOT NULL,
+  `extra90` text NOT NULL,
+  `extra91` text NOT NULL,
+  `extra92` text NOT NULL,
+  `extra93` text NOT NULL,
+  `extra94` text NOT NULL,
+  `extra95` text NOT NULL,
+  `extra96` text NOT NULL,
+  `extra97` text NOT NULL,
+  `extra98` text NOT NULL,
+  `extra99` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_images`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_images` (
+  `id` int(5) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL,
+  `parent` int(4) NOT NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(4) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `path` varchar(255) NOT NULL,
+  `rout` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `uid` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `sector` varchar(255) NOT NULL,
+  `text` text NOT NULL,
+  PRIMARY KEY  (`id`)
+  ) ENGINE=MyISAM;
+			</query>	
+			<query>
+			DROP TABLE IF EXISTS `#__properties_product_category`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_product_category` (
+  `productid` int(11) NOT NULL default '0',
+  `categoryid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`productid`,`categoryid`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_profiles`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_profiles` (
+  `id` int(6) NOT NULL auto_increment,
+  `mid` int(6) NOT NULL default '0',
+  `name` varchar(50) NOT NULL default '',
+  `alias` varchar(255) NOT NULL,
+  `company` varchar(255) NOT NULL default '',
+  `type` int(1) NOT NULL default '0',
+  `info` varchar(255) NOT NULL default '',
+  `bio` mediumtext NOT NULL,
+  `properties` int(3) NOT NULL default '0',
+  `address1` varchar(50) NOT NULL default '',
+  `address2` varchar(50) NOT NULL default '',
+  `locality` varchar(50) NOT NULL default '',
+  `pcode` varchar(10) NOT NULL default '',
+  `state` varchar(50) NOT NULL default '',
+  `country` varchar(50) NOT NULL default '',
+  `show` tinyint(1) NOT NULL default '0',
+  `email` varchar(50) NOT NULL default '',
+  `phone` varchar(20) NOT NULL default '',
+  `fax` varchar(20) NOT NULL default '',
+  `mobile` varchar(20) NOT NULL default '',
+  `skype` varchar(30) NOT NULL default '',
+  `ymsgr` varchar(30) NOT NULL default '',
+  `icq` varchar(30) NOT NULL default '',
+  `web` varchar(255) NOT NULL default '',
+  `blog` varchar(255) NOT NULL default '',
+  `image` varchar(70) NOT NULL default '',
+  `logo_image` varchar(70) NOT NULL default '',
+  `logo_image_large` varchar(70) NOT NULL default '',
+  `published` tinyint(1) NOT NULL default '0',
+  `ordering` int(3) NOT NULL default '0',
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `mid` (`mid`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_state`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_state` (
+  `id` int(3) NOT NULL auto_increment,
+  `name` varchar(100) NOT NULL,
+  `alias` varchar(100) NOT NULL,
+  `parent` int(5) NOT NULL,
+  `mid` int(5) NOT NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(11) NOT NULL default '0',
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_type`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_type` (
+  `id` int(2) NOT NULL auto_increment,
+  `name` varchar(100) default NULL,
+  `alias` varchar(100) default NULL,
+  `parent` int(2) default NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(1) NOT NULL,
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_available_product`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_available_product` (
+  `id` int(11) NOT NULL auto_increment,
+  `id_product` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `available` tinyint(4) NOT NULL,
+  `published` tinyint(4) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_comments`;
+			</query>
+			<query>			
+CREATE TABLE IF NOT EXISTS `#__properties_comments` (
+  `id` int(10) NOT NULL auto_increment,
+  `userid` int(10) NOT NULL default '0',
+  `status` int(10) NOT NULL default '0',
+  `productid` int(10) NOT NULL default '0',
+  `ip` varchar(15) NOT NULL default '',
+  `name` varchar(200) default NULL,
+  `title` varchar(200) NOT NULL default '',
+  `comment` text NOT NULL,
+  `preview` text NOT NULL,
+  `date` date NOT NULL default '0000-00-00',
+  `published` tinyint(1) NOT NULL default '0',
+  `ordering` int(11) NOT NULL default '0',
+  `email` varchar(100) NOT NULL default '',
+  `website` varchar(100) NOT NULL default '',
+  `updateme` smallint(5) unsigned NOT NULL default '0',
+  `custom1` varchar(200) NOT NULL default '',
+  `custom2` varchar(200) NOT NULL default '',
+  `custom3` varchar(200) NOT NULL default '',
+  `custom4` varchar(200) NOT NULL default '',
+  `custom5` varchar(200) NOT NULL default '',
+  `star` decimal(3,2) NOT NULL default '5',
+  `star1` tinyint(1) NOT NULL,
+  `star2` tinyint(1) NOT NULL,
+  `star3` tinyint(1) NOT NULL,
+  `star4` tinyint(1) NOT NULL,
+  `star5` tinyint(1) NOT NULL,
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `option` varchar(50) NOT NULL default 'com_content',
+  `voted` smallint(6) NOT NULL default '0',
+  `referer` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM ;
+			</query>	
+			<query>
+			DROP TABLE IF EXISTS `#__properties_contacts`;
+			</query>		
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_contacts` (
+  `id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL,
+  `user_id` int(5) NOT NULL,
+  `date` datetime NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `cp` varchar(100) NOT NULL,
+  `text` text NOT NULL,
+  `userfile` varchar(255) NOT NULL,
+  `layout` varchar(255) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE = MYISAM ;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_rating`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_rating` (
+  `product_id` int(11) NOT NULL,
+  `rating_sum` int(11) NOT NULL,
+  `rating_count` int(11) NOT NULL,
+  `lastip` varchar(50) NOT NULL,
+  PRIMARY KEY  (`product_id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_rating_user`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_rating_user` (
+  `product_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `rating` tinyint(1) NOT NULL,
+  `lastip` varchar(50) NOT NULL,
+  PRIMARY KEY  (`product_id`,`user_id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_rates`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_rates` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(255) NOT NULL,
+  `description` text,
+  `week` int(11) NOT NULL,
+  `validfrom` date default NULL,
+  `validto` date default NULL,
+  `rateperday` double default '0',
+  `rateperweek` double NOT NULL,
+  `mindays` int(11) default NULL,
+  `maxdays` int(11) default NULL,
+  `minpeople` int(11) default NULL,
+  `maxpeople` int(11) default NULL,
+  `typeid` varchar(10) default NULL,
+  `weekonly` tinyint(2) NOT NULL default '0',
+  `validfrom_ts` date default NULL,
+  `validto_ts` date default NULL,
+  `dayofweek` int(1) NOT NULL default '7',
+  `productid` int(11) default NULL,
+  `published` tinyint(1) NOT NULL,
+  `ordering` int(6) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;
+			</query>
+			<query>
+			DROP TABLE IF EXISTS `#__properties_pdfs`;
+			</query>
+			<query>
+CREATE TABLE IF NOT EXISTS `#__properties_pdfs` (
+`id` int( 5 ) NOT NULL AUTO_INCREMENT ,
+`name` varchar( 255 ) NOT NULL ,
+`alias` varchar( 255 ) NOT NULL ,
+`parent` int( 3 ) NOT NULL ,
+`published` tinyint( 1 ) NOT NULL ,
+`ordering` int( 5 ) NOT NULL ,
+`text` text NOT NULL ,
+`date` date NOT NULL ,
+`archivo` varchar( 255 ) NOT NULL ,
+`archivo_path` varchar( 255 ) NOT NULL ,
+`archivo_rout` varchar( 255 ) NOT NULL ,
+PRIMARY KEY ( `id` )
+) ENGINE=MyISAM;
+			</query>
+		</queries>
+	</install>
+  <files folder="site">
+		<filename>controller.php</filename>
+		<filename>properties.php</filename>
+		<filename>index.html</filename>		
+		<filename>router.php</filename>	
+		<filename>controllers/ajax.php</filename>
+		<filename>controllers/ajaxCaptcha.php</filename>
+		<filename>controllers/ajaxVote.php</filename>
+		<filename>controllers/availables.php</filename>
+		<filename>controllers/ajaxbooking.php</filename>
+		<filename>controllers/booking.php</filename>
+		<filename>controllers/comments.php</filename>
+		<filename>controllers/contact.php</filename>
+		<filename>controllers/googlemap.php</filename>
+		<filename>controllers/images.php</filename>
+		<filename>controllers/mapajax.php</filename>
+		<filename>controllers/ModuleSearchAjaxVertical.php</filename>
+		<filename>controllers/ModuleSearchAjaxFull.php</filename>
+		<filename>controllers/panel.php</filename>
+		<filename>controllers/product.php</filename>
+		<filename>controllers/products.php</filename>
+		<filename>controllers/profile.php</filename>
+		<filename>controllers/property.php</filename>
+		<filename>controllers/rates.php</filename>	
+		<filename>controllers/searchajax.php</filename>		
+		<filename>helpers/bookcalendar.php</filename>
+		<filename>helpers/calendar.php</filename>
+		<filename>helpers/helper.php</filename>
+		<filename>helpers/listhelper.php</filename>
+		<filename>helpers/link.php</filename>
+		<filename>helpers/orderby.php</filename>	
+		<filename>helpers/orderbyagents.php</filename>
+		<filename>helpers/pagelinks.php</filename>
+		<filename>helpers/select.php</filename>	
+		<filename>helpers/tasklinks.php</filename>
+		<filename>helpers/pagination.php</filename>
+		<filename>helpers/vote.php</filename>
+		<filename>models/agents.php</filename>
+		<filename>models/availables.php</filename>
+		<filename>models/comments.php</filename>
+		<filename>models/contacts.php</filename>
+		<filename>models/form1.php</filename>
+		<filename>models/images.php</filename>
+		<filename>models/index.html</filename>
+		<filename>models/list.php</filename>
+		<filename>models/profile.php</filename>
+		<filename>models/panel.php</filename>
+		<filename>models/products.php</filename>
+		<filename>models/properties.php</filename>		
+		<filename>models/property.php</filename>
+		<filename>models/rates.php</filename>			
+		<filename>models/shortlist.php</filename>	
+		<filename>models/subproduct.php</filename>			
+		<filename>views/index.html</filename>		
+		<filename>views/agents/index.html</filename>
+		<filename>views/agents/view.html.php</filename>
+		<filename>views/agents/tmpl/index.html</filename>
+		<filename>views/agents/tmpl/default.php</filename>		
+		<filename>views/form1/index.html</filename>		
+		<filename>views/form1/view.html.php</filename>		
+		<filename>views/form1/tmpl/index.html</filename>
+		<filename>views/form1/tmpl/default.php</filename>
+		<filename>views/form1/tmpl/default.xml</filename>		
+		<filename>views/booking/index.html</filename>
+		<filename>views/booking/metadata.xml</filename>
+		<filename>views/booking/view.html.php</filename>		
+		<filename>views/booking/tmpl/index.html</filename>
+		<filename>views/booking/tmpl/default.php</filename>
+		<filename>views/booking/tmpl/default.xml</filename>				
+		<filename>views/subproduct/index.html</filename>
+		<filename>views/subproduct/metadata.xml</filename>
+		<filename>views/subproduct/view.html.php</filename>
+		<filename>views/subproduct/tmpl/default.php</filename>
+		<filename>views/subproduct/tmpl/default.xml</filename>
+		<filename>views/subproduct/tmpl/index.html</filename>
+		<filename>views/properties/index.html</filename>
+		<filename>views/properties/metadata.xml</filename>
+		<filename>views/properties/view.html.php</filename>
+		<filename>views/properties/view.feed.php</filename>
+		<filename>views/properties/tmpl/index.html</filename>
+		<filename>views/properties/tmpl/default.php</filename>
+		<filename>views/properties/tmpl/default.xml</filename>
+		<filename>views/properties/tmpl/default_1.php</filename>
+		<filename>views/properties/tmpl/default_2.php</filename>
+		<filename>views/properties/tmpl/default_popup.php</filename>
+		<filename>views/properties/tmpl/default_popup_1.php</filename>
+		<filename>views/properties/tmpl/default_popup_2.php</filename>
+		<filename>views/properties/tmpl/default_print.php</filename>	
+		<filename>views/properties/tmpl/default_recommend.php</filename>	
+		<filename>views/property/index.html</filename>
+		<filename>views/property/metadata.xml</filename>
+		<filename>views/property/view.html.php</filename>
+		<filename>views/property/tmpl/default.php</filename>
+		<filename>views/property/tmpl/default_tabs.php</filename>
+		<filename>views/property/tmpl/default.xml</filename>
+		<filename>views/property/tmpl/index.html</filename>
+		<filename>views/property/tmpl/default_contact.php</filename>
+		<filename>views/property/tmpl/default_print.php</filename>
+		<filename>views/property/tmpl/default_reservation.php</filename>	
+		<filename>views/panel/index.html</filename>
+		<filename>views/panel/view.html.php</filename>
+		<filename>views/panel/tmpl/index.html</filename>
+		<filename>views/panel/tmpl/default.php</filename>	
+		<filename>views/panel/tmpl/default_addproperty.php</filename>
+		<filename>views/panel/tmpl/default_images.php</filename>
+		<filename>views/panel/tmpl/default_login.php</filename>
+		<filename>views/panel/tmpl/default_newaccount.php</filename>
+		<filename>views/panel/tmpl/default_popup.php</filename>
+		<filename>views/panel/tmpl/default_add_rates.php</filename>
+		<filename>views/panel/tmpl/default_rates.php</filename>
+		<filename>views/profile/index.html</filename>
+		<filename>views/profile/view.html.php</filename>
+		<filename>views/profile/tmpl/index.html</filename>
+		<filename>views/profile/tmpl/default.php</filename>		
+		<filename>views/shortlist/index.html</filename>
+		<filename>views/shortlist/view.html.php</filename>
+		<filename>views/shortlist/tmpl/index.html</filename>
+		<filename>views/shortlist/tmpl/default_print.php</filename>
+		<filename>views/shortlist/tmpl/default_popup.php</filename>
+		<filename>views/shortlist/tmpl/default.php</filename>
+		<filename>views/templates/details.php</filename>
+		<filename>views/templates/details1.php</filename>
+		<filename>views/templates/details2.php</filename>
+		<filename>views/templates/details3.php</filename>
+		<filename>views/templates/details_tab.php</filename>
+		<filename>views/templates/details_tab1.php</filename>
+		<filename>views/templates/details_tab2.php</filename>
+		<filename>views/templates/details_tab3.php</filename>
+		<filename>views/templates/index.html</filename>
+		<filename>views/templates/header.php</filename>
+		<filename>views/templates/list.php</filename>
+		<filename>views/templates/list1.php</filename>
+		<filename>views/templates/list2.php</filename>
+		<filename>views/templates/list3.php</filename>
+		<filename>includes/index.html</filename>
+		<filename>includes/pagination.php</filename>
+		<filename>includes/colorbox/colorbox.css</filename>
+		<filename>includes/colorbox/colorbox-custom.css</filename>
+		<filename>includes/colorbox/colorbox-custom-ie.css</filename>
+		<filename>includes/colorbox/jquery.colorbox.js</filename>
+		<filename>includes/colorbox/index.html</filename>
+		<filename>includes/colorbox/images/index.html</filename>		
+		<filename>includes/colorbox/images/borderBottomCenter.png</filename>
+		<filename>includes/colorbox/images/borderBottomLeft.png</filename>
+		<filename>includes/colorbox/images/borderBottomRight.png</filename>
+		<filename>includes/colorbox/images/borderMiddleLeft.png</filename>
+		<filename>includes/colorbox/images/borderMiddleRight.png</filename>
+		<filename>includes/colorbox/images/borderTopCenter.png</filename>
+		<filename>includes/colorbox/images/borderTopLeft.png</filename>
+		<filename>includes/colorbox/images/borderTopRight.png</filename>
+		<filename>includes/colorbox/images/controls.png</filename>
+		<filename>includes/colorbox/images/loading.gif</filename>
+		<filename>includes/colorbox/images/pixel.gif</filename>
+		<filename>includes/colorbox/images/stripe.png</filename>	
+		<filename>includes/css/ajaxvote.css</filename>
+		<filename>includes/css/carousel.css</filename>
+		<filename>includes/css/de-DE-index.css</filename>		
+		<filename>includes/css/list1.css</filename>
+		<filename>includes/css/list2.css</filename>
+		<filename>includes/css/list3.css</filename>
+		<filename>includes/css/detail.css</filename>
+		<filename>includes/css/detail3.css</filename>
+		<filename>includes/css/dialog_box.css</filename>				
+		<filename>includes/css/es-ES-index.css</filename>
+		<filename>includes/css/en-GB-index.css</filename>
+		<filename>includes/css/it-IT-index.css</filename>
+		<filename>includes/css/image-slideshow.css</filename>
+		<filename>includes/css/index.css</filename>
+		<filename>includes/css/jd.gallery.css</filename>	
+		<filename>includes/css/Stickman.MultiUpload.css</filename>			
+		<filename>includes/css/ru-RU-index.css</filename>			
+		<filename>includes/css/slimbox.css</filename>				
+		<filename>includes/highslide/highslide.css</filename>
+		<filename>includes/highslide/highslide-with-html.js</filename>
+		<filename>includes/highslide/index.html</filename>
+		<filename>includes/highslide/graphics/index.html</filename>		
+		<filename>includes/highslide/graphics/outlines/index.html</filename>
+		<filename>includes/highslide/graphics/outlines/rounded-white.png</filename>		
+		<filename>includes/img/1_close.png</filename>
+		<filename>includes/img/1_closeENGB.png</filename>
+		<filename>includes/img/360.jpg</filename>
+		<filename>includes/img/ajax-loader.gif</filename>		
+		<filename>includes/img/backstripes.gif</filename>
+		<filename>includes/img/cal.gif</filename>
+		<filename>includes/img/closelabel.gif</filename>
+		<filename>includes/img/comments.png</filename>	
+		<filename>includes/img/contactar.png</filename>
+		<filename>includes/img/delete.png</filename>
+		<filename>includes/img/description.png</filename>
+		<filename>includes/img/DETAILS_MARKET0-en-GB.png</filename>
+		<filename>includes/img/DETAILS_MARKET1-en-GB.png</filename>
+		<filename>includes/img/DETAILS_MARKET2-en-GB.png</filename>
+		<filename>includes/img/DETAILS_MARKET0-de-DE.png</filename>
+		<filename>includes/img/DETAILS_MARKET1-de-DE.png</filename>
+		<filename>includes/img/DETAILS_MARKET2-de-DE.png</filename>
+		<filename>includes/img/detalles.png</filename>		
+		<filename>includes/img/dialog_close.gif</filename>
+		<filename>includes/img/downarrow.png</filename>
+		<filename>includes/img/downarrow0.png</filename>
+		<filename>includes/img/error_bg.jpg</filename>
+		<filename>includes/img/error_header.gif</filename>		
+		<filename>includes/img/fondo500-163.png</filename>	
+		<filename>includes/img/foto.png</filename>
+		<filename>includes/img/flag-en-GB.png</filename>
+		<filename>includes/img/flag-es-ES.png</filename>
+		<filename>includes/img/flag-it-IT.png</filename>
+		<filename>includes/img/flag-de-DE.png</filename>
+		<filename>includes/img/flag-ru-RU.png</filename>
+		<filename>includes/img/gradient-e5e5e5-ffffff.gif</filename>
+		<filename>includes/img/icon-16-checkin.png</filename>
+		<filename>includes/img/icon-32-back.png</filename>
+		<filename>includes/img/icon-32-apply.png</filename>
+		<filename>includes/img/icon-32-save.png</filename>
+		<filename>includes/img/icon-32-cancel.png</filename>
+		<filename>includes/img/icon-32-delete.png</filename>
+		<filename>includes/img/icon-32-edit.png</filename>
+		<filename>includes/img/icon-32-new.png</filename>
+		<filename>includes/img/icon-32-upload.png</filename>
+		<filename>includes/img/icon-32-rates.png</filename>
+		<filename>includes/img/icon-32-images.png</filename>		
+		<filename>includes/img/loading.gif</filename>
+		<filename>includes/img/mapa.png</filename>		
+		<filename>includes/img/nextlabel.gif</filename>
+		<filename>includes/img/prevlabel.gif</filename>
+		<filename>includes/img/panoramica.png</filename>
+		<filename>includes/img/publish_g.png</filename>
+		<filename>includes/img/publish_r.png</filename>
+		<filename>includes/img/publish_x.png</filename>
+		<filename>includes/img/reservar.png</filename>		
+		<filename>includes/img/s5_menu_link.png</filename>
+		<filename>includes/img/slider-down-de-DE.png</filename>
+		<filename>includes/img/slider-down-en-GB.png</filename>
+		<filename>includes/img/slider-down-es-ES.png</filename>
+		<filename>includes/img/slider-down-ru-RU.png</filename>
+		<filename>includes/img/slider-up-de-DE.png</filename>
+		<filename>includes/img/slider-up-en-GB.png</filename>
+		<filename>includes/img/slider-up-es-ES.png</filename>
+		<filename>includes/img/slider-up-ru-RU.png</filename>		
+		<filename>includes/img/sortables_plus.gif</filename>
+		<filename>includes/img/sortables_plusENGB.gif</filename>
+		<filename>includes/img/sortables_plusde-DE.gif</filename>
+		<filename>includes/img/sortables_plusru-RU.gif</filename>
+		<filename>includes/img/sortables_x.gif</filename>
+		<filename>includes/img/sortables_xENGB.gif</filename>
+		<filename>includes/img/sortables_xde-DE.gif</filename>
+		<filename>includes/img/sortables_xru-RU.gif</filename>
+		<filename>includes/img/star.png</filename>
+		<filename>includes/img/tabsclose80.gif</filename>
+		<filename>includes/img/tabsfondo.gif</filename>
+		<filename>includes/img/tabsopen80.gif</filename>
+		<filename>includes/img/thumb_invisible.gif</filename>
+		<filename>includes/img/thumbs_mask.gif</filename>
+		<filename>includes/img/tick.png</filename>	
+		<filename>includes/img/uparrow.png</filename>
+		<filename>includes/img/uparrow0.png</filename>			
+		<filename>includes/js/config.js</filename>
+		<filename>includes/js/dialog_box.js</filename>
+		<filename>includes/js/drawer.js</filename>
+		<filename>includes/js/image-slideshow.js</filename>
+		<filename>includes/js/includes.js</filename>
+		<filename>includes/js/jd.gallery.js</filename>
+		<filename>includes/js/slimbox.js</filename>
+		<filename>includes/js/mediabox.js</filename>		
+		<filename>includes/js/pamoorama0.js</filename>	
+		<filename>includes/js/Stickman.MultiUpload.js</filename>	
+		<filename>includes/mail/index.html</filename>
+		<filename>includes/mail/contact/example_html.php</filename>
+		<filename>includes/mail/contact/example_txt.php</filename>
+		<filename>includes/mail/contact/form1_html.php</filename>
+		<filename>includes/mail/contact/form1_txt.php</filename>
+		<filename>includes/mail/contact/footer-tail.jpg</filename>
+		<filename>includes/mail/contact/header-bg.png</filename>
+		<filename>includes/mail/contact/index.html</filename>		
+		<filename>includes/mail/booking/admin_html.php</filename>
+		<filename>includes/mail/booking/copy_html.php</filename>		
+		<filename>includes/mail/booking/footer-tail.jpg</filename>
+		<filename>includes/mail/booking/header-bg.png</filename>
+		<filename>includes/mail/booking/index.html</filename>	
+		<filename>includes/mail/booking/screen.css</filename>
+	</files>
+	<languages folder="site">
+        <language tag="es-ES">es-ES.com_properties.ini</language>
+		<language tag="en-GB">en-GB.com_properties.ini</language>
+		<language tag="de-DE">de-DE.com_properties.ini</language>
+		<language tag="ru-RU">ru-RU.com_properties.ini</language>
+		<language tag="it-IT">it-IT.com_properties.ini</language>
+		<language tag="pt-BR">pt-BR.com_properties.ini</language>		
+    </languages>		
+	<administration>		
+		<menu img="components/com_properties/includes/img/menu_properties.png">Properties</menu>		
+		<submenu>
+			<menu img="components/com_properties/includes/img/t_properties.png" link="option=com_properties">Control Panel</menu>	
+			<menu img="components/com_properties/includes/img/t_configuration.png" link="option=com_properties&amp;view=configuration">Configuration</menu>
+			<menu img="components/com_properties/includes/img/t_categories.png" link="option=com_properties&amp;view=categories">Categories</menu>
+			<menu img="components/com_properties/includes/img/t_types.png" link="option=com_properties&amp;view=types">Types</menu>
+			<menu img="components/com_properties/includes/img/menu_properties.png" link="option=com_properties&amp;view=products">Products</menu>			
+			<menu img="components/com_properties/includes/img/t_help.png" link="option=com_properties&amp;view=help">Help</menu>				
+		</submenu>		
+    <files folder="admin">
+			<filename>admin.controller.php</filename>
+			<filename>admin.properties.php</filename>
+			<filename>config.xml</filename>	
+			<filename>index.html</filename>
+			<filename>install.properties.php</filename>
+			<filename>toolbar.properties.php</filename>
+			<filename>uninstall.properties.php</filename>					
+			<filename>controllers/ajax.php</filename>
+			<filename>controllers/availables.php</filename>
+			<filename>controllers/categories.php</filename>
+			<filename>controllers/comments.php</filename>
+			<filename>controllers/contacts.php</filename>
+			<filename>controllers/countries.php</filename>
+			<filename>controllers/images.php</filename>
+			<filename>controllers/index.html</filename>
+			<filename>controllers/languages.php</filename>
+			<filename>controllers/localities.php</filename>
+			<filename>controllers/pdfs.php</filename>
+			<filename>controllers/products.php</filename>
+			<filename>controllers/profiles.php</filename>
+			<filename>controllers/property.php</filename>
+			<filename>controllers/rates.php</filename>
+			<filename>controllers/states.php</filename>
+			<filename>controllers/subproducts.php</filename>
+			<filename>controllers/types.php</filename>						
+			<filename>elements/index.html</filename>
+			<filename>elements/category.php</filename>
+			<filename>elements/property.php</filename>
+			<filename>elements/type.php</filename>			
+			<filename>helpers/filter.php</filename>
+			<filename>helpers/calendar.php</filename>
+			<filename>helpers/helper.php</filename>
+			<filename>helpers/index.html</filename>
+			<filename>helpers/menu_left.php</filename>
+			<filename>helpers/select.php</filename>			
+			<filename>models/availables.php</filename>			
+			<filename>models/bookings.php</filename>
+			<filename>models/categories.php</filename>
+			<filename>models/comments.php</filename>
+			<filename>models/contacts.php</filename>
+			<filename>models/countries.php</filename>
+			<filename>models/db.php</filename>
+			<filename>models/element.php</filename>
+			<filename>models/images.php</filename>
+			<filename>models/index.html</filename>			
+			<filename>models/localities.php</filename>
+			<filename>models/pdfs.php</filename>
+			<filename>models/products.php</filename>
+			<filename>models/profiles.php</filename>
+			<filename>models/properties.php</filename>
+			<filename>models/property.php</filename>
+			<filename>models/rates.php</filename>		
+			<filename>models/states.php</filename>
+			<filename>models/subproducts.php</filename>
+			<filename>models/types.php</filename>
+			<filename>models/users.php</filename>			
+			<filename>tables/available_product.php</filename>
+			<filename>tables/category.php</filename>
+			<filename>tables/comments.php</filename>
+			<filename>tables/contacts.php</filename>
+			<filename>tables/country.php</filename>
+			<filename>tables/images.php</filename>
+			<filename>tables/index.html</filename>
+			<filename>tables/lightbox.php</filename>
+			<filename>tables/locality.php</filename>
+			<filename>tables/pdfs.php</filename>
+			<filename>tables/product_category.php</filename>			
+			<filename>tables/products.php</filename>
+			<filename>tables/profiles.php</filename>
+			<filename>tables/rates.php</filename>
+			<filename>tables/rating_user.php</filename>
+			<filename>tables/state.php</filename>
+			<filename>tables/subproducts.php</filename>
+			<filename>tables/type.php</filename>			
+			<filename>views/index.html</filename>			
+			<filename>views/availables/index.html</filename>
+			<filename>views/availables/view.html.php</filename>
+			<filename>views/availables/tmpl/index.html</filename>
+			<filename>views/availables/tmpl/default_form.php</filename>
+			<filename>views/availables/tmpl/default.php</filename>			
+			<filename>views/bookings/index.html</filename>
+			<filename>views/bookings/view.html.php</filename>
+			<filename>views/bookings/tmpl/index.html</filename>
+			<filename>views/bookings/tmpl/default_form.php</filename>
+			<filename>views/bookings/tmpl/default.php</filename>			
+			<filename>views/categories/index.html</filename>
+			<filename>views/categories/view.html.php</filename>
+			<filename>views/categories/tmpl/index.html</filename>
+			<filename>views/categories/tmpl/form.php</filename>
+			<filename>views/categories/tmpl/default.php</filename>			
+			<filename>views/comments/index.html</filename>
+			<filename>views/comments/view.html.php</filename>
+			<filename>views/comments/tmpl/index.html</filename>
+			<filename>views/comments/tmpl/form.php</filename>
+			<filename>views/comments/tmpl/default.php</filename>			
+			<filename>views/configuration/index.html</filename>
+			<filename>views/configuration/view.html.php</filename>
+			<filename>views/configuration/tmpl/index.html</filename>			
+			<filename>views/configuration/tmpl/default.php</filename>			
+			<filename>views/contacts/index.html</filename>
+			<filename>views/contacts/view.html.php</filename>
+			<filename>views/contacts/tmpl/index.html</filename>
+			<filename>views/contacts/tmpl/form.php</filename>
+			<filename>views/contacts/tmpl/default.php</filename>			
+			<filename>views/countries/index.html</filename>
+			<filename>views/countries/view.html.php</filename>
+			<filename>views/countries/tmpl/index.html</filename>
+			<filename>views/countries/tmpl/form.php</filename>
+			<filename>views/countries/tmpl/default.php</filename>			
+			<filename>views/db/index.html</filename>
+			<filename>views/db/view.html.php</filename>
+			<filename>views/db/tmpl/index.html</filename>			
+			<filename>views/db/tmpl/default.php</filename>
+			<filename>views/element/view.html.php</filename>			
+			<filename>views/element/index.html</filename>			
+			<filename>views/help/index.html</filename>
+			<filename>views/help/view.html.php</filename>
+			<filename>views/help/tmpl/index.html</filename>			
+			<filename>views/help/tmpl/default.php</filename>
+			<filename>views/images/index.html</filename>
+			<filename>views/images/view.html.php</filename>
+			<filename>views/images/tmpl/index.html</filename>
+			<filename>views/images/tmpl/default.php</filename>			
+			<filename>views/info/index.html</filename>
+			<filename>views/info/view.html.php</filename>
+			<filename>views/info/tmpl/index.html</filename>			
+			<filename>views/info/tmpl/default.php</filename>			
+			<filename>views/languages/index.html</filename>
+			<filename>views/languages/view.html.php</filename>
+			<filename>views/languages/tmpl/index.html</filename>
+			<filename>views/languages/tmpl/edit.php</filename>
+			<filename>views/languages/tmpl/default.php</filename>			
+			<filename>views/localities/index.html</filename>
+			<filename>views/localities/view.html.php</filename>
+			<filename>views/localities/tmpl/index.html</filename>
+			<filename>views/localities/tmpl/form.php</filename>
+			<filename>views/localities/tmpl/default.php</filename>
+			<filename>views/pdfs/index.html</filename>
+			<filename>views/pdfs/view.html.php</filename>
+			<filename>views/pdfs/tmpl/index.html</filename>
+			<filename>views/pdfs/tmpl/form.php</filename>
+			<filename>views/pdfs/tmpl/default.php</filename>			
+			<filename>views/products/index.html</filename>
+			<filename>views/products/view.html.php</filename>
+			<filename>views/products/tmpl/index.html</filename>
+			<filename>views/products/tmpl/form.php</filename>
+			<filename>views/products/tmpl/default.php</filename>			
+			<filename>views/profiles/index.html</filename>
+			<filename>views/profiles/view.html.php</filename>
+			<filename>views/profiles/tmpl/index.html</filename>
+			<filename>views/profiles/tmpl/form.php</filename>
+			<filename>views/profiles/tmpl/default.php</filename>			
+			<filename>views/properties/index.html</filename>
+			<filename>views/properties/view.html.php</filename>
+			<filename>views/properties/tmpl/index.html</filename>			
+			<filename>views/properties/tmpl/default.php</filename>
+			<filename>views/rates/index.html</filename>
+			<filename>views/rates/view.html.php</filename>
+			<filename>views/rates/tmpl/index.html</filename>
+			<filename>views/rates/tmpl/form.php</filename>
+			<filename>views/rates/tmpl/default.php</filename>						
+			<filename>views/states/index.html</filename>
+			<filename>views/states/view.html.php</filename>
+			<filename>views/states/tmpl/index.html</filename>
+			<filename>views/states/tmpl/form.php</filename>
+			<filename>views/states/tmpl/default.php</filename>			
+			<filename>views/subproducts/index.html</filename>
+			<filename>views/subproducts/view.html.php</filename>
+			<filename>views/subproducts/tmpl/index.html</filename>
+			<filename>views/subproducts/tmpl/form.php</filename>
+			<filename>views/subproducts/tmpl/default.php</filename>			
+			<filename>views/types/index.html</filename>
+			<filename>views/types/view.html.php</filename>
+			<filename>views/types/tmpl/index.html</filename>
+			<filename>views/types/tmpl/form.php</filename>
+			<filename>views/types/tmpl/default.php</filename>			
+			<filename>views/users/index.html</filename>
+			<filename>views/users/view.html.php</filename>
+			<filename>views/users/tmpl/index.html</filename>
+			<filename>views/users/tmpl/form.php</filename>
+			<filename>views/users/tmpl/default.php</filename>			
+			<filename>includes/index.html</filename>
+			<filename>includes/css/index.html</filename>
+			<filename>includes/css/index.css</filename>
+			<filename>includes/css/Stickman.MultiUpload.css</filename>
+			<filename>includes/img/index.html</filename>
+			<filename>includes/img/ajax-loader.gif</filename>
+			<filename>includes/img/articles.png</filename>
+			<filename>includes/img/bottom_menu_bg.jpg</filename>
+			<filename>includes/img/categories.png</filename>
+			<filename>includes/img/comments.png</filename>
+			<filename>includes/img/configuration.png</filename>
+			<filename>includes/img/contacts.png</filename>
+			<filename>includes/img/control.gif</filename>
+			<filename>includes/img/countries.png</filename>
+			<filename>includes/img/forms.png</filename>
+			<filename>includes/img/group.png</filename>
+			<filename>includes/img/help.png</filename>
+			<filename>includes/img/icon-48-article.png</filename>
+			<filename>includes/img/icon-edit-fields.gif</filename>
+			<filename>includes/img/icon-stats.gif</filename>
+			<filename>includes/img/info.png</filename>
+			<filename>includes/img/j_arrow.png</filename>
+			<filename>includes/img/j_arrow_down.png</filename>
+			<filename>includes/img/languages.png</filename>
+			<filename>includes/img/loading.gif</filename>
+			<filename>includes/img/localities.png</filename>
+			<filename>includes/img/logo.png</filename>
+			<filename>includes/img/menu_properties.png</filename>
+			<filename>includes/img/panel.png</filename>
+			<filename>includes/img/panel_bg.png</filename>
+			<filename>includes/img/pdfs.png</filename>
+			<filename>includes/img/products.png</filename>
+			<filename>includes/img/profiles.png</filename>
+			<filename>includes/img/properties.css</filename>
+			<filename>includes/img/properties.png</filename>
+			<filename>includes/img/rates.png</filename>
+			<filename>includes/img/states.png</filename>
+			<filename>includes/img/subproducts.png</filename>
+			<filename>includes/img/t_articles.png</filename>
+			<filename>includes/img/t_categories.png</filename>
+			<filename>includes/img/t_categories_add.png</filename>
+			<filename>includes/img/t_configuration.png</filename>
+			<filename>includes/img/t_contacts.png</filename>
+			<filename>includes/img/t_comments_add.png</filename>
+			<filename>includes/img/t_comments.png</filename>
+			<filename>includes/img/t_countries.png</filename>
+			<filename>includes/img/t_countries_add.png</filename>
+			<filename>includes/img/t_help.png</filename>
+			<filename>includes/img/t_info.png</filename>
+			<filename>includes/img/t_localities.png</filename>
+			<filename>includes/img/t_localities_add.png</filename>
+			<filename>includes/img/t_pdfs.png</filename>
+			<filename>includes/img/t_pdfs_add.png</filename>
+			<filename>includes/img/t_products.png</filename>
+			<filename>includes/img/t_products_add.png</filename>
+			<filename>includes/img/t_profiles.png</filename>
+			<filename>includes/img/t_profiles_add.png</filename>
+			<filename>includes/img/t_properties.png</filename>
+			<filename>includes/img/t_rates.png</filename>
+			<filename>includes/img/t_rates_add.png</filename>
+			<filename>includes/img/t_states.png</filename>
+			<filename>includes/img/t_states_add.png</filename>
+			<filename>includes/img/t_subproducts.png</filename>
+			<filename>includes/img/t_subproducts_add.png</filename>
+			<filename>includes/img/t_types.png</filename>
+			<filename>includes/img/t_types_add.png</filename>
+			<filename>includes/img/t_users.png</filename>
+			<filename>includes/img/top_menu_bg.jpg</filename>
+			<filename>includes/img/types.png</filename>
+			<filename>includes/img/users.png</filename>	
+			<filename>includes/js/index.html</filename>
+			<filename>includes/js/Stickman.MultiUpload.js</filename>		
+			<filename>updates/2.3.0909.sql</filename>
+				
+		</files>
+		<languages folder="admin">
+            <language tag="es-ES">es-ES.com_properties.ini</language>
+			<language tag="en-GB">en-GB.com_properties.ini</language>
+			<language tag="de-DE">de-DE.com_properties.ini</language>
+			<language tag="ru-RU">ru-RU.com_properties.ini</language>
+			<language tag="it-IT">it-IT.com_properties.ini</language>
+			<language tag="pt-BR">pt-BR.com_properties.ini</language>			
+        </languages>
+	</administration>
+</install>

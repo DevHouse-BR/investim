@@ -1,0 +1,126 @@
+
+.producto {
+clear:both;
+
+}
+div.detalles span{
+font-size:90% !important;	
+font-weight:bold !important;
+line-height:120%;
+
+}
+
+#accordion .toggler {
+padding: 0px !important;
+ margin:-6px 2px 0px 0px;
+ float:left;
+}
+
+
+
+
+
+.arrowImageRight, .arrowImageDown{
+				margin-top: 0px;
+				cursor: pointer;
+				float: right;
+			}
+			.arrowImageRight{
+			float: right;				
+				height: 34px;
+				width: 110px;
+				margin-top: 0px;
+			}
+			.arrowImageDown{
+			float: right;				
+				height: 34px;
+				width: 110px;
+				margin-top: 0px;
+			}
+			
+			
+.ListObjectBoxBottom
+{
+    height:22px; /* 24px */
+    padding:2px 2px 0px 0px;
+    margin:0;    
+	/*border: 1px solid red;*/
+}
+.ListObjectBoxInfoRate {
+float:right;
+ margin:10px 0px;
+   font-size:12px;
+   line-height:18px;
+   font-weight:bold;
+   color:#11699F;
+}
+.ListObjectBoxBottom .ShowOnGoogleMapOpener
+{
+    display:block;
+    float:left;
+    text-align:center;
+    width:118px; 
+    height:19px;
+    line-height:19px; 
+    font-size:11px;
+    font-weight:bold;
+	text-decoration:none;
+    color:#11699F;
+    margin:-1px 2px 0px 0px;
+    background:transparent url('../img/btnlnkDetail.png') no-repeat top right; 
+}		
+
+
+
+a.ListObjectBoxBottomlnkDetail
+{
+    display:block;
+	float:left;
+	text-align:center; 
+    width:118px;
+    height:19px;
+    line-height:19px;
+	font-size:11px;   
+	font-weight:bold;
+    color:#11699F;
+    text-decoration:none;
+    margin:-1px 2px 0px 0px;
+    background:transparent url('../img/btnlnkDetail.png') no-repeat top right;     	
+}
+
+
+
+	
+a.linkBookingButton{
+    display:block;
+    width:118px;
+    height:19px;
+    line-height:19px;
+    margin:2px 0px;
+    color:White !important;
+    text-decoration:none;
+    text-align:center;
+    font-size:11px;
+    font-weight:bold;
+	float:left;
+	margin:-1px 2px 0px 0px;	
+}
+a.linkBookingButton{background:transparent url('../img/btnlnkBooking.png') no-repeat top right; }
+a.linkBookingButton:hover{
+    color:White;
+}
+.innerelement img.foto {
+margin: 3px;
+padding:2px;
+border: 1px solid #CCCCCC;
+}
+
+#imageagent img{
+margin: 5px;
+padding:3px;
+border: 1px solid #CCCCCC;
+}
+
+.descagent {
+width:300px; float:left;
+}

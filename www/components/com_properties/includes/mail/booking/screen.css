@@ -1,0 +1,71 @@
+td.mainbar h2 {
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 16px;
+   font-weight: bold;
+   color: #a72323;
+   margin: 0 0 4px 0;
+   padding: 0 0 4px 0;
+   border-bottom: 1px solid #cbcbcb;
+}
+
+td.mainbar h3 {
+   font-family: Georgia, serif;
+   font-size: 16px;
+   font-weight: normal;
+   color: #333333;
+   margin: 10px 0 14px 0;
+   padding: 0;
+}
+
+td.mainbar p {
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 12px;
+   font-weight: normal;
+   color: #333333;
+   margin: 0 0 16px 0;
+   padding: 0;
+}
+
+td.mainbar p.top {
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 10px;
+   font-weight: bold;
+   color: #a72323;
+   margin: 0 0 30px 0;
+   padding: 0;
+}
+
+td.mainbar p.top a {
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 10px;
+   font-weight: bold;
+   color: #a72323;
+}
+
+td.field {
+	background:#F1F1F1;
+	font-family: "Lucida Grande", sans-serif;
+   font-size: 12px;
+}
+
+td.field_send {
+	font-family: "Lucida Grande", sans-serif;
+   font-size: 12px;
+}
+
+td.footer p {
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 10px;
+   font-weight: normal;
+   color: #151515;
+}
+td.footer a{
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 10px;
+   font-weight: normal;
+   color: #151515;
+   text-decoration:none;
+}
+td.footer a:hover{   
+   text-decoration:underline;
+}

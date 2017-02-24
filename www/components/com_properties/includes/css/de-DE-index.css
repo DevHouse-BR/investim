@@ -1,0 +1,21 @@
+.arrowImageRight{
+				background: url(../img/sortables_plusde-DE.gif) no-repeat;
+			}
+.arrowImageDown{
+				background: url(../img/sortables_xde-DE.gif) no-repeat;
+			}
+#buscador .arrowImageRight{
+				background: url(../img/slider-up-de-DE.png) no-repeat 50% 0;				
+			}
+#buscador .arrowImageDown{
+				background: url(../img/slider-down-de-DE.png) no-repeat 50% 0;								
+			}
+#lbCloseLink {	
+	background: transparent url(../img/1_closede-DE.png) no-repeat center;
+			}
+#flagaddproperty {
+width:48px;
+height:48px;
+margin:10px;
+background: url(../img/flag-de-DE.png) no-repeat;
+}

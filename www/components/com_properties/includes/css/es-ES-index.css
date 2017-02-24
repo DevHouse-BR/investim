@@ -1,0 +1,21 @@
+.arrowImageRight{
+				background: url(../img/sortables_plus.gif) no-repeat;
+			}
+.arrowImageDown{
+				background: url(../img/sortables_x.gif) no-repeat;
+			}
+#buscador .arrowImageRight{
+				background: url(../img/slider-up-es-ES.png) no-repeat 50% 0;				
+			}
+#buscador .arrowImageDown{
+				background: url(../img/slider-down-es-ES.png) no-repeat 50% 0;								
+			}
+#lbCloseLink {	
+	background: transparent url(../img/1_close.png) no-repeat center;
+			}
+#flagaddproperty {
+width:48px;
+height:48px;
+margin:10px;
+background: url(../img/flag-es-ES.png) no-repeat;
+}
