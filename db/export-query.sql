@@ -6,7 +6,7 @@ SELECT
     p.ref as ref,
     t.name as tipo,
 	c.name as categoria,
-    p.text as descricao,
+    REPLACE(p.text, '<html />', '') as descricao,
     p.available as disponibilidade,
     
   /*  <select name="available" style="width:150px;"> 
@@ -20,24 +20,24 @@ SELECT
          </select>
  */   
     
-    p.extra71 as preco,
+    REPLACE(REPLACE(p.extra71, ',00', ''), '.', '') as preco,
     p.extra50 as razao_social,
     p.extra51 as cnpj,
     p.extra59 as constituicao,
     p.extra60 as tributacao,
     p.extra81 as ativos,
-    p.extra62 as valor_estoque,
+    REPLACE(REPLACE(p.extra62, ',00', ''), '.', '') as valor_estoque,
     p.extra82 as produtos,
     p.extra83 as servicos,
     p.extra63 as fundacao,
     p.extra84 as motivo_venda,
-    p.extra64 as vol_vendas_a_1,
-    p.extra65 as vol_vendas_a_2,
-    p.extra66 as vol_vendas_a_3,
-    p.extra67 as faturamento_mensal,
-    p.extra68 as lucro_bruto,
+    REPLACE(REPLACE(p.extra64, ',00', ''), '.', '') as vol_vendas_a_1,
+    REPLACE(REPLACE(p.extra65, ',00', ''), '.', '') as vol_vendas_a_2,
+    REPLACE(REPLACE(p.extra66, ',00', ''), '.', '') as vol_vendas_a_3,
+    REPLACE(REPLACE(p.extra67, ',00', ''), '.', '') as faturamento_mensal,
+    REPLACE(REPLACE(p.extra68, ',00', ''), '.', '') as lucro_bruto,
     p.extra69 as margem_lucro,
-    p.extra70 as lucro_liquido,
+    REPLACE(REPLACE(p.extra70, ',00', ''), '.', '') as lucro_liquido,
     p.extra1 as imovel,
     p.extra85 as endividamento,
     p.extra86 as condicoes_venda,
@@ -73,3 +73,5 @@ WHERE
     s.id = p.sid
     AND
     pais.id = p.cyid
+    
+ORDER BY id;
