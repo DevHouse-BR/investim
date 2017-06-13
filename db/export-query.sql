@@ -38,7 +38,9 @@ SELECT
     REPLACE(REPLACE(p.extra68, ',00', ''), '.', '') as lucro_bruto,
     p.extra69 as margem_lucro,
     REPLACE(REPLACE(p.extra70, ',00', ''), '.', '') as lucro_liquido,
-    p.extra1 as imovel,
+    
+    CASE p.extra1 WHEN 1 THEN 'proprio' WHEN 2 THEN 'alugado' END as imovel,
+    
     p.extra85 as endividamento,
     p.extra86 as condicoes_venda,
     p.extra72 as numero_funcionarios,
