@@ -51,10 +51,10 @@ SELECT
     l.name as cidade,
     s.name as estado,
     pais.name as pais,
-    p.extra52 as _contato_responsavel,
-    p.extra55 as _contato_telefone,
-    p.extra56 as _contato_email,
-    p.extra57 as _contato_skype
+    p.extra52 as contato_responsavel,
+    p.extra55 as contato_telefone,
+    p.extra56 as contato_email,
+    p.extra57 as contato_skype
     
 
 FROM  

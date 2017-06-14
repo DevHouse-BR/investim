@@ -1,0 +1,93 @@
+<DATA>
+
+	<ROW>
+		<id>21</id>
+		<titulo>2 POSTOS DE COMBUSTÍVEIS</titulo>
+		<ref>0001</ref>
+		<tipo>Postos de Combustível</tipo>
+		<categoria>Comércio</categoria>
+		<descricao></descricao>
+		<disponibilidade>3</disponibilidade>
+		<preco>500000</preco>
+		<razao_social>Razão Social </razao_social>
+		<cnpj>CNPJ </cnpj>
+		<constituicao>Sociedade Limitada</constituicao>
+		<tributacao>Simples</tributacao>
+		<ativos>Conveniência completa, posto completo.</ativos>
+		<valor_estoque>0</valor_estoque>
+		<produtos>Gasolina, Álcool, diesel, óleo, loja de conveniência.</produtos>
+		<servicos>Lavação, loja de conveniência, troca de óleo.</servicos>
+		<fundacao>1995</fundacao>
+		<motivo_venda>Comercial</motivo_venda>
+		<vol_vendas_a_1>0</vol_vendas_a_1>
+		<vol_vendas_a_2>0</vol_vendas_a_2>
+		<vol_vendas_a_3>0</vol_vendas_a_3>
+		<faturamento_mensal>480000</faturamento_mensal>
+		<lucro_bruto>30000</lucro_bruto>
+		<margem_lucro>2</margem_lucro>
+		<lucro_liquido>8000</lucro_liquido>
+		<imovel>alugado</imovel>
+		<endividamento>Possui somente os passivos normal de funcionários caso queria demiti-los, aproximadamente 40 mil.</endividamento>
+		<condicoes_venda>Este valor é pelo os dois postos, menos o estoque em torno de R$ 250.000,00 a ser contato no momento da venda,aceita proposta</condicoes_venda>
+		<numero_funcionarios>18</numero_funcionarios>
+		<diferencial>Localização em avenida com 3 ruas duas laterais e uma frontal, muito movimentadas, acessos aos bairros,  Possibilidade ampla de aumento do faturamento.Venda de 170.000 litros mês os dois postos com possibilidade de aumento de faturamento.
+Loja de conveniência faturamento em torno de 70 mil, porém muito mal trabalhadas e com aspectos feios, com boa reforma já venderiam mais.
+Contrato com o dono do imóvel até 2017 com multa de rescisão caso ele venha cancelar o contrato, 
+Contrato com a bandeira tem mais 5 anos.
+</diferencial>
+		<endereco>Endereço </endereco>
+		<endereco_complemento>Complemento</endereco_complemento>
+		<endereco_bairro>Bairro </endereco_bairro>
+		<cidade>Joinville</cidade>
+		<estado>Santa Catarina</estado>
+		<pais>Brasil</pais>
+		<contato_responsavel>Responsável </contato_responsavel>
+		<contato_telefone>Telefone </contato_telefone>
+		<contato_email>Email </contato_email>
+		<contato_skype>Skype</contato_skype>
+	</ROW>
+
+	<ROW>
+		<id>22</id>
+		<titulo>EMPRESA DE SEGURANÇA PRIVADA</titulo>
+		<ref>0002</ref>
+		<tipo>Empresa de Segurança Privada</tipo>
+		<categoria>Serviços</categoria>
+		<descricao></descricao>
+		<disponibilidade>0</disponibilidade>
+		<preco>1500000</preco>
+		<razao_social>eeeeeeeeeee</razao_social>
+		<cnpj>11.691.117/0001-85</cnpj>
+		<constituicao>Sociedade Simples</constituicao>
+		<tributacao>Simples</tributacao>
+		<ativos>São 4 veículos todos pagos, varias armas, estrutura completa duas sedes com escritórios montados, etc...</ativos>
+		<valor_estoque></valor_estoque>
+		<produtos></produtos>
+		<servicos>Segurança patrimonial , escolta armada ,segurança pessoal e eventos</servicos>
+		<fundacao>1997</fundacao>
+		<motivo_venda>Reduzir rítimo de trabalho, pois possui mais negócios</motivo_venda>
+		<vol_vendas_a_1></vol_vendas_a_1>
+		<vol_vendas_a_2></vol_vendas_a_2>
+		<vol_vendas_a_3></vol_vendas_a_3>
+		<faturamento_mensal>560000</faturamento_mensal>
+		<lucro_bruto>100000</lucro_bruto>
+		<margem_lucro>6</margem_lucro>
+		<lucro_liquido>35000</lucro_liquido>
+		<imovel>alugado</imovel>
+		<endividamento>Não a nenhuma divida, credito com bancos, somente o passivo normal com os funcionários.</endividamento>
+		<condicoes_venda>Estuda 50 % em imoveis</condicoes_venda>
+		<numero_funcionarios>208</numero_funcionarios>
+		<diferencial>Empresa com tradição, clientela formada de pequenas médias e grandes empresas, empresa enxuta, com possibilidade de dobrar o faturamento mais não se faz e virtude de falta de tempo para dedicação dos sócios, muita licitação governamental que se pode entrar atualmente é somente empresa particular, os sócios retiram realmente o lucro são 15 mil para cada um e a sobra se reinveste no negocio.</diferencial>
+		<endereco>Rua Max</endereco>
+		<endereco_complemento></endereco_complemento>
+		<endereco_bairro>jjjjjjjjjjjjjj</endereco_bairro>
+		<cidade>Sul do Brasil</cidade>
+		<estado>Santa Catarina</estado>
+		<pais>Brasil</pais>
+		<contato_responsavel>Ronaldo</contato_responsavel>
+		<contato_telefone>47 34357058</contato_telefone>
+		<contato_email>mauriciobbn@brturbo.com.br</contato_email>
+		<contato_skype>mauriciobbn</contato_skype>
+	</ROW>
+
+</DATA>
